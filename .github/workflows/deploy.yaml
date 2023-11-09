@@ -24,8 +24,8 @@ jobs:
 
     - name: Deploy
       run: |
-        git config --global user.name 'Your Name'
-        git config --global user.email 'your-email@example.com'
+        git config --global user.name 'Evan Brothers'
+        git config --global user.email 'ekbrothers@gmail.com'
         echo "machine github.com login ${{ github.actor }} password ${{ secrets.GITHUB_TOKEN }}" > ~/.netrc
         npm run deploy
       env:
