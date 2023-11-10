@@ -26,11 +26,6 @@ jobs:
           # cache: yarn
           cache: npm
 
-      # - name: Install dependencies
-      #   run: yarn install --frozen-lockfile
-      # - name: Build website
-      #   run: yarn build
-      #   working-directory: docusaurus-test/
       - name: Install dependencies
         run: npm ci
         working-directory: docusaurus-test/
