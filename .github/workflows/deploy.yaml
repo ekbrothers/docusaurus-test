@@ -9,6 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: docusaurus-test  # Set this to the path of your Docusaurus project
+
     steps:
     - uses: actions/checkout@v2
 
