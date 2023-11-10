@@ -30,9 +30,9 @@ jobs:
       run: |
         git config --global user.name 'Evan Brothers'
         git config --global user.email 'ekbrothers@gmail.com'
-        echo "machine github.com login ${{ github.actor }} password ${{ secrets.GITHUB_TOKEN }}" > ~/.netrc
+        # No need to set up SSH or modify ~/.netrc for HTTPS
         npm run deploy
       env:
-        USE_SSH: true
-        GIT_USER: ${{ github.actor }}
-        DEPLOYMENT_BRANCH: gh-pages
+        # Use the automatically created GITHUB_TOKEN secret
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DEPLOYMENT_BRANCH: main
