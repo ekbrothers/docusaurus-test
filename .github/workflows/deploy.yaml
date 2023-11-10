@@ -23,8 +23,10 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+        working-directory: docusaurus-test/
       - name: Build website
         run: yarn build
+        working-directory: docusaurus-test/
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
