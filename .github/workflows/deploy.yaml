@@ -19,7 +19,7 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
-        node-version: '14'  # Use the node version compatible with your project
+        node-version: '18'  # Use the node version compatible with your project
 
     - name: Install and Build
       run: |
