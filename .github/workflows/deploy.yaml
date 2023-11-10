@@ -35,7 +35,8 @@ jobs:
         run: npm ci
         working-directory: docusaurus-test/
       - name: Build website
-        run: npm run build
+        run: | 
+          npm run build
           cp CNAME ./build/CNAME
         working-directory: docusaurus-test/
       
