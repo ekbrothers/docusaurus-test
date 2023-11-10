@@ -17,9 +17,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-        working-directory: docusaurus-test/
         with:
           node-version: 18
+          cache-dependency-path: docusaurus-test/package-lock.json
           # cache: yarn
           cache: npm
 
